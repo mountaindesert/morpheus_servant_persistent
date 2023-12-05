@@ -10,11 +10,11 @@ You will need a working Postgres server running on your machine.
 
 ## Environment Variables
 
-SERVICE_PORT - default is 5051
-POSTGRES - postgres connection string; default is "host=localhost port=5432 user=postgres dbname=postgres password=postgres"
-ENVIRONMENT - default is development
+- SERVICE_PORT - default is 5051
+- POSTGRES - postgres connection string; default is "host=localhost port=5432 user=postgres dbname=postgres password=postgres"
+- ENVIRONMENT - default is development
 
-Run `source .env` to load the defaults in .env
+Run `source .env` to load the defaults from .env
 
 ## Commands
 
