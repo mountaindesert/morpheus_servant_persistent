@@ -1,0 +1,41 @@
+scalar UTCTime
+
+type Query {
+  patient(id: ID!): Patient
+  patientsByFavoriteColor(favoriteColor: String!): [Patient!]!
+  patientsBySymptom(description: String!): [Patient!]!
+  patientsByName(name: String!): [Patient!]!
+}
+
+type Mutation {
+  createPatient(
+    name: String!
+    email: String!
+    age: Int!
+    birthdate: UTCTime!
+    favoriteColor: String
+  ): Patient!
+  reportSymptom(description: String!, patientId: ID!, severity: Int!): Symptom
+}
+
+type Patient {
+  id: ID!
+  name: String!
+  email: String!
+  age: Int!
+  birthdate: UTCTime!
+  favoriteColor: String
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Symptom {
+  id: ID!
+  description: String!
+  reportedAt: UTCTime!
+  patientId: ID!
+  severity: Int!
+}

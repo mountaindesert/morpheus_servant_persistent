@@ -1,0 +1,153 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           morpheus-servant-persistent
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/morpheus-servant-persistent#readme>
+homepage:       https://github.com/githubuser/morpheus-servant-persistent#readme
+bug-reports:    https://github.com/githubuser/morpheus-servant-persistent/issues
+author:         Quincy Andelin
+maintainer:     quincy.andelin@evernow.com
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/morpheus-servant-persistent
+
+library
+  exposed-modules:
+      Config
+      Database
+      DBSchema
+      GQLSchema
+      Server.Api
+      Server.Servant
+  other-modules:
+      Paths_morpheus_servant_persistent
+  autogen-modules:
+      Paths_morpheus_servant_persistent
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , data-default
+    , envy
+    , esqueleto
+    , file-embed
+    , http-media
+    , monad-logger
+    , morpheus-graphql
+    , morpheus-graphql-core
+    , morpheus-graphql-server
+    , mtl
+    , optparse-applicative
+    , persistent
+    , persistent-postgresql
+    , servant-server
+    , string-conversions
+    , text
+    , time
+    , transformers
+    , unix
+    , unliftio
+    , unliftio-core
+    , wai
+    , wai-cors
+    , wai-extra
+    , warp
+  default-language: Haskell2010
+
+executable morpheus-servant-persistent-exe
+  main-is: Main.hs
+  other-modules:
+      Options
+      Paths_morpheus_servant_persistent
+  autogen-modules:
+      Paths_morpheus_servant_persistent
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , data-default
+    , envy
+    , esqueleto
+    , file-embed
+    , http-media
+    , monad-logger
+    , morpheus-graphql
+    , morpheus-graphql-core
+    , morpheus-graphql-server
+    , morpheus-servant-persistent
+    , mtl
+    , optparse-applicative
+    , persistent
+    , persistent-postgresql
+    , servant-server
+    , string-conversions
+    , text
+    , time
+    , transformers
+    , unix
+    , unliftio
+    , unliftio-core
+    , wai
+    , wai-cors
+    , wai-extra
+    , warp
+  default-language: Haskell2010
+
+test-suite morpheus-servant-persistent-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_morpheus_servant_persistent
+  autogen-modules:
+      Paths_morpheus_servant_persistent
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , data-default
+    , envy
+    , esqueleto
+    , file-embed
+    , http-media
+    , monad-logger
+    , morpheus-graphql
+    , morpheus-graphql-core
+    , morpheus-graphql-server
+    , morpheus-servant-persistent
+    , mtl
+    , optparse-applicative
+    , persistent
+    , persistent-postgresql
+    , servant-server
+    , string-conversions
+    , text
+    , time
+    , transformers
+    , unix
+    , unliftio
+    , unliftio-core
+    , wai
+    , wai-cors
+    , wai-extra
+    , warp
+  default-language: Haskell2010
